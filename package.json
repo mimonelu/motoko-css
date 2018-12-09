@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "reset": "rm -R ./node_modules ; rm ./package-lock.json ; npm i",
+    "dev": "node-sass --output-style compressed --watch ./src/motoko.scss ./motoko.css",
+    "build": "node-sass --output-style compressed ./src/motoko.scss ./motoko.css"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "node-sass": "^4.9.3",
+    "normalize-scss": "^7.0.1",
+    "rimraf": "^2.6.2"
+  }
+}

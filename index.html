@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="motoko" lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="mimonelu">
+    <meta name="copyright" content="Copyright (c) 2018 mimonelu">
+    <meta name="description" content="要素自体にスタイルを適用する軽量CSSフレームワークです。">
+    <meta name="format-detection" content="email=no, telephone=no, address=no">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="motoko.css">
+    <title>motoko.css</title>
+    <link href="./motoko.css" rel="stylesheet">
+    <style>
+
+      .motoko div {
+        background-color: #f0f0f0;
+        border-radius: 2px;
+        margin: 2vmin 0;
+        padding: 2vmin;
+      }
+
+      .global-footer {
+        padding: 64px 0;
+      }
+
+        .global-footer > small {
+          font-size: 0.75rem;
+          display: block;
+          text-align: center;
+        }
+
+    </style>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>motoko.css</h1>
+      </header>
+
+      <div><a href="javascript: void 0;">This is `a` tag.</a></div>
+
+      <div><abbr title="This is `abbr` tag.">abbr</abbr></div>
+
+      <div><address>This is `address` tag.</address></div>
+
+      <div><article>This is `article` tag.</article></div>
+
+      <div><aside>This is `aside` tag.</aside></div>
+
+      <div><audio>This is `audio` tag.</audio></div>
+
+      <div><b>This is `b` tag.</b></div>
+
+      <div><bdi>This is `bdi` tag.</bdi></div>
+
+      <div><bdo>This is `bdo` tag.</bdo></div>
+
+      <div>
+        <blockquote>
+          This is `blockquote` tag.<br>
+          Looking so good?
+        </blockquote>
+      </div>
+
+      <div>This is `br` tag.</br>This is `br` tag.</div>
+
+      <div><button>This is `button` tag.</button></div>
+
+      <div>
+        <p>This is `canvas` tag.</p>
+        <canvas width="256" height="128"></canvas>
+        <script>
+          ;(function () {
+            var canvas = window.document.querySelector("canvas");
+            var context = canvas.getContext("2d");
+            context.fillStyle = "#000000";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+            context.font = "1.0rem monospace";
+            context.fillStyle = "#ffffff";
+            context.fillText("This is CANVAS tag.", 16, 32);
+          })();
+        </script>
+      </div>
+
+      <div><cite>This is `cite` tag.</cite></div>
+
+      <div><code>This is `code` tag.</code></div>
+
+      <div><col>This is `col` tag. [TODO]</col></div>
+
+      <div><colgroup>This is `colgroup` tag. [TODO]</colgroup></div>
+
+      <div><data value="12345678">This is `data` tag.</data></div>
+
+      <div><datalist>This is `datalist` tag.</datalist></div>
+
+      <div><del>This is `del` tag.</del></div>
+
+      <div><details>This is `details` tag.</details></div>
+
+      <div><dfn>This is `dfn` tag.</dfn></div>
+
+      <div><dialog>This is `dialog` tag.</dialog></div>
+
+      <div><div>This is `div` tag.</div></div>
+
+      <div>
+        <dl>
+          <dt>This is <mark>dl > dt</mark> tag.</dt>
+          <dd>This is <mark>dl > dd</mark> tag.</dd>
+        </dl>
+      </div>
+
+      <div><em>This is `em` tag.</em></div>
+
+      <div><embed>This is `embed` tag.</embed></div>
+
+      <div><fieldset>This is `fieldset` tag.</fieldset></div>
+
+      <div>
+        <figure>
+          <p>This is `figure` tag.</p>
+          <img src="./images/1.png" width="256" height="256">
+          <figcaption>This is `figcaption` tag.</figcaption>
+        </figure>
+      </div>
+
+      <div><footer>This is `footer` tag.</footer></div>
+
+      <div><form>This is `form` tag.</form></div>
+
+      <div><h1>This is `h1` tag.</h1></div>
+
+      <div><h2>This is `h2` tag.</h2></div>
+
+      <div><h3>This is `h3` tag.</h3></div>
+
+      <div><h4>This is `h4` tag.</h4></div>
+
+      <div><h5>This is `h5` tag.</h5></div>
+
+      <div><h6>This is `h6` tag.</h6></div>
+
+      <div><header>This is `header` tag.</header></div>
+
+      <div><hr>This is `hr` tag.</hr></div>
+
+      <div><i>This is `i` tag.</i></div>
+
+      <div><iframe>This is `iframe` tag.</iframe></div>
+
+      <div><img>This is `img` tag.</img></div>
+
+      <div><input type="text">This is input[type=text] tag.</input></div>
+
+      <div><input type="button" value="input[type=button] tag"></div>
+
+      <div class="motoko-file">
+        <label>
+          Browse...
+          <input type="file" multiple>
+        </label>
+        <p>Please select files.</p>
+      </div>
+
+      <div><input type="submit" value="input[type=submit] tag"></div>
+
+      <div><input type="radio"> This is input[type=radio] tag</div>
+
+      <div><input type="checkbox"> This is input[type=checkbox] tag</div>
+
+      <div><ins>This is `ins` tag.</ins></div>
+
+      <div><kbd>This is `kbd` tag.</kbd></div>
+
+      <div><label><input type="radio"> This is `label` tag.</label></div>
+
+      <div><legend>This is `legend` tag.</legend></div>
+
+      <div>
+        <p>This is `ol` tag.</p>
+        <ol>
+          <li>This is `li` tag.</li>
+        </ol>
+      </div>
+
+      <div>
+        <p>This is `ul` tag.</p>
+        <ul>
+          <li>This is `li` tag.</li>
+        </ul>
+      </div>
+
+      <div><main>This is `main` tag.</main></div>
+
+      <div>
+        <p>This is `map` tag.</p>
+        <map name="sample-map">
+          <area shape="circle" coords="128,128,96" href="javascript: alert('Hit!'); void 0;">
+        </map>
+        <img src="./images/2.png" width="256" height="256" usemap="#sample-map">
+      </div>
+
+      <div><mark>This is `mark` tag.</mark></div>
+
+      <div><menu>This is `menu` tag.</menu></div>
+
+      <div><menuitem>This is `menuitem` tag.</menuitem></div>
+
+      <div><meter>This is `meter` tag.</meter></div>
+
+      <div><nav>This is `nav` tag.</nav></div>
+
+      <div><noframes>This is `noframes` tag.</noframes></div>
+
+      <div><noscript>This is `noscript` tag.</noscript></div>
+
+      <div><object>This is `object` tag.</object></div>
+
+      <div><optgroup>This is `optgroup` tag.</optgroup></div>
+
+      <div><option>This is `option` tag.</option></div>
+
+      <div><output>This is `output` tag.</output></div>
+
+      <div><p>This is `p` tag.</p></div>
+
+      <div><param>This is `param` tag.</param></div>
+
+      <div><picture>This is `picture` tag.</picture></div>
+
+      <div>
+        <pre>;(function () {
+   "use strict";
+   window.console.log("This is <mark>pre</mark> tag.");
+ })();</pre>
+      </div>
+
+      <div><progress>This is `progress` tag.</progress></div>
+
+      <div><q>This is `q` tag.</q></div>
+
+      <div><rp>This is `rp` tag.</rp></div>
+
+      <div><rt>This is `rt` tag.</rt></div>
+
+      <div><ruby>This is `ruby` tag.</ruby></div>
+
+      <div><s>This is `s` tag.</s></div>
+
+      <div><samp>This is `samp` tag.</samp></div>
+
+      <div><section>This is `section` tag.</section></div>
+
+      <div><select>This is `select` tag.</select></div>
+
+      <div><small>This is `small` tag.</small></div>
+
+      <div><source>This is `source` tag.</source></div>
+
+      <div><span>This is `span` tag.</span></div>
+
+      <div><strong>This is `strong` tag.</strong></div>
+
+      <div><sub>This is `sub` tag.</sub></div>
+
+      <div><summary>This is `summary` tag.</summary></div>
+
+      <div><sup>This is `sup` tag.</sup></div>
+
+      <div>
+        <p>This is `table` tag.</p>
+        <table>
+          <caption>This is `caption` tag.</caption>
+          <thead>This is `thead` tag.</thead>
+          <tbody>
+            <tr>
+              <th>This is `th` tag.</th>
+              <td>This is `td` tag.</td>
+            </tr>
+          </tbody>
+          <tfoot>This is `tfoot` tag.</tfoot>
+        </table>
+      </div>
+
+      <div><textarea>This is `textarea` tag.</textarea></div>
+
+      <div><time>This is `time` tag.</time></div>
+
+      <div><track>This is `track` tag.</track></div>
+
+      <div><u>This is `u` tag.</u></div>
+
+      <div><var>This is `var` tag.</var></div>
+
+      <div><video>This is `video` tag.</video></div>
+
+      <div><wbr>This is `wbr` tag.</wbr></div>
+
+      <footer class="global-footer">
+        <small>Copyright &copy; 2018 mimonelu</small>
+      </footer>
+
+    </article>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128584959-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-128584959-1');
+    </script>
+  </body>
+</html>

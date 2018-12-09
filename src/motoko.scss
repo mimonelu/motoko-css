@@ -1,0 +1,516 @@
+@charset "UTF-8";
+
+@import "./node_modules/normalize-scss/sass/normalize";
+
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Merriweather Regular"), local("Merriweather-Regular"), url(https://fonts.gstatic.com/s/merriweather/v19/u-440qyriQwlOrhSvowK_l5-fCZMdeX3rg.woff2) format("woff2");
+}
+
+.motoko {
+
+  // Variables
+
+  $fontFamily: "Merriweather", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "游ゴシック  Medium", Meiryo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  $fontWeight: normal;
+  $bgColor: #ffffff;
+  $fgColor: #404040;
+  $accentColor: #0080f0;
+
+  // motoko node
+
+  background-color: $bgColor;
+  color: $fgColor;
+  font-family: $fontFamily;
+  font-size: calc(0.375vmin + 15px);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: $fontWeight;
+  letter-spacing: 0.1vmin;
+  text-size-adjust: 100%;
+
+  ::selection {
+    background-color: rgba($accentColor, 0.25);
+  }
+
+  // body node
+
+  body {
+    margin: 0;
+  }
+
+  // Elements
+
+  a {
+    border-bottom: 1px solid $accentColor;
+    color: $accentColor;
+    padding-bottom: 1px;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+
+  }
+
+  abbr {}
+
+  address {}
+
+  article {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 4vmin;
+    max-width: 1024px;
+  }
+
+  aside {
+    box-lines: multiple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+  }
+
+  audio {}
+
+  b {}
+
+  bdi {}
+
+  bdo {}
+
+  blockquote {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    font-style: italic;
+    line-height: 1.75;
+    margin: 4vmin 0;
+    padding: 1.5vmin 3vmin;
+  }
+
+  br {}
+
+  %button {
+    appearance: none;
+    background-color: $bgColor;
+    border: 1px solid $accentColor;
+    border-radius: 2px;
+    color: $accentColor;
+    font-family: $fontFamily;
+    font-size: 1.0rem;
+
+    &:focus {
+      filter: drop-shadow(0 0 1vmin $accentColor);
+      outline: none;
+    }
+
+    &:hover {
+      background-color: rgba($accentColor, 0.5);
+      color: $bgColor;
+    }
+
+  }
+
+  button {
+    @extend %button;
+    cursor: pointer;
+    line-height: 1;
+    padding: 1.5vmin 3vmin;
+  }
+
+  canvas {
+    display: block;
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+    max-width: 100%;
+  }
+
+  cite {}
+
+  code {
+    background-color: $fgColor;
+    border-radius: 2px;
+    color: $bgColor;
+    display: inline-block;
+    font-style: monospace;
+    margin: 0 1vmin;
+    padding: 0 1vmin;
+  }
+
+  col {}
+
+  colgroup {}
+
+  data {}
+
+  datalist {}
+
+  del {}
+
+  details {}
+
+  dfn {}
+
+  dialog {}
+
+  div {}
+
+  dl {
+    overflow: hidden;
+  }
+
+    dt {
+      float: left;
+    }
+
+    dd {}
+
+  em {}
+
+  embed {}
+
+  fieldset {}
+
+  figure {
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+
+    img,
+    .motoko-img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+  }
+
+    figcaption {
+      font-size: 0.75rem;
+      margin-top: 1vmin;
+      text-align: center;
+    }
+
+  footer {
+    box-sizing: border-box;
+    margin: 9vmin auto;
+    padding: 0 4vmin;
+    max-width: 1024px;
+    text-align: center;
+
+    p {
+      text-align: center;
+    }
+
+  }
+
+  form {}
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: $fontWeight;
+    letter-spacing: 0.125vmin;
+  }
+  @for $i from 1 through 6 {
+    h#{$i} {
+      $h: (6 - $i) / 6 + 0.75;
+      $m: #{10 - $i}vmin;
+      font-size: #{$h}rem;
+      line-height: #{$h + 0.5}rem;
+      margin-top: $m;
+      margin-bottom: $m;
+    }
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    border-bottom: 4px double rgba($fgColor, 0.5);
+    padding-bottom: 0.25rem;
+  }
+
+  header {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 4vmin;
+    max-width: 1024px;
+    text-align: center;
+  }
+
+  hr {
+    background-color: $fgColor;
+    border-style: none;
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+    height: 2px;
+  }
+
+  i {}
+
+  iframe {}
+
+  img,
+  .motoko-img {}
+
+  input {}
+
+  input[type="button"],
+  input[type="submit"],
+  input[type="text"] {
+    @extend %button;
+  }
+
+  input[type="button"],
+  input[type="submit"],
+  .motoko-file label {
+    cursor: pointer;
+    line-height: 1;
+    padding: 1.5vmin 3vmin;
+  }
+
+  input[type="text"] {
+    cursor: text;
+    line-height: 1;
+    padding: 1.5vmin;
+  }
+
+  .motoko-file {
+    display: flex;
+    justify-content: center;
+
+    label {
+      @extend %button;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    p {
+      margin: 0 0 0 1vmin;
+    }
+
+  }
+
+  ins {}
+
+  kbd {}
+
+  label {
+
+    & > input {
+      margin-left: 1vmin;
+    }
+
+  }
+
+  legend {}
+
+  ol,
+  ul {
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+    padding-left: 0;
+  }
+
+  li ol,
+  li ul {
+    margin-top: 1.25vmin;
+    margin-bottom: 1.25vmin;
+  }
+
+    li {
+      margin-left: 1.5rem;
+      line-height: 1.75;
+
+      &:not(:last-child) {
+        margin-bottom: 1.25vmin;
+      }
+
+    }
+
+  main {}
+
+  map {}
+
+    area {}
+
+  mark {
+    background-color: rgba(255, 255, 0, 0.9);
+    border-radius: 2px;
+    padding: 0 1vmin;
+  }
+
+  // Deprecated
+  // menu {}
+
+  // Deprecated
+  // menuitem {}
+
+  meter {}
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 4vmin;
+
+    & > * {
+      display: block;
+    }
+    & > *:not(:first-child) {
+      margin-left: 2vmin;
+      position: relative;
+      &:before {
+        background-color: $fgColor;
+        content: "";
+        display: block;
+        position: absolute;
+        left: -2vmin;
+        width: 1px;
+        height: 1.5em;
+      }
+    }
+    & > *:not(:last-child) {
+      margin-right: 2vmin;
+    }
+
+  }
+
+  noframes {}
+
+  noscript {}
+
+  object {}
+
+  optgroup {}
+
+  option {}
+
+  output {}
+
+  p {
+    line-height: 1.75;
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+  }
+
+  param {}
+
+  picture {}
+
+  pre {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+    padding: 4vmin;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+
+  progress {}
+
+  q {}
+
+  rp {}
+
+  rt {}
+
+  ruby {}
+
+  s {}
+
+  samp {}
+
+  section {}
+
+  select {}
+
+  small {}
+
+  source {}
+
+  span {}
+
+  strong {}
+
+  sub {}
+
+  summary {}
+
+  sup {}
+
+  table {
+    border-collapse: collapse;
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+    width: 100%;
+  }
+
+    caption {}
+
+    thead {}
+
+    tbody {}
+
+      tr:not(:last-child) {
+        border-bottom: 1px solid $fgColor;
+      }
+
+        th, td {
+          line-height: 1.75;
+          text-align: left;
+          vertical-align: middle;
+          &:not(:last-child) {
+            padding: 2vmin 0 2vmin 2vmin;
+          }
+          &:last-child {
+            padding: 2vmin;
+            width: 100%;
+          }
+        }
+
+        th {
+          white-space: nowrap;
+        }
+
+    tfoot {}
+
+  textarea {
+    @extend %button;
+    box-sizing: border-box;
+    cursor: text;
+    display: block;
+    line-height: 1.75;
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+    padding: 2vmin;
+    width: 100%;
+    word-break: break-word;
+  }
+
+  time {}
+
+  track {}
+
+  u {}
+
+  var {}
+
+  video {}
+
+  wbr {}
+
+  // Overwrites
+
+  aside > * {
+    display: block;
+    margin: 1vmin;
+  }
+
+}
